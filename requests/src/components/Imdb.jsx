@@ -3,9 +3,7 @@ import axios from 'axios'
 
 function Imdb() {
 
-    const key = process.env.REACT_APP_API_KEY
-
-    const url = "https://imdb-api.com/en/API/Top250Movies/" + key
+    const url = `https://imdb-api.com/en/API/Top250Movies/${process.env.REACT_APP_API_KEY}`
 
     const [movies, setMovies] = useState();
 
@@ -15,7 +13,7 @@ function Imdb() {
                 console.log(response)
                 setMovies(response.data.items)
             })
-            .catch(error => console.log("Error" + error + "KEY" + key))
+            .catch(error => console.log("Error" + error))
 
     }
 
@@ -23,7 +21,6 @@ function Imdb() {
         <>
             <h1>Imdb</h1>
             <button onClick={() => getData()}>Verificar Top 250 Filmes</button>
-            {/* {<h1>JSON: </h1> && JSON.stringify(digimons)} */}
             {movies?.map(movie => {
                 return (
                     <div key={movie.id}>
