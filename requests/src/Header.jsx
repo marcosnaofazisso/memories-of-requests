@@ -7,9 +7,13 @@ function Header() {
             <h1>Header</h1>
             <NavLink to="pokemon">PokeAPI</NavLink>
             <br />
+            <NavLink to="digimon">Digimon API</NavLink>
+            <br />
             <NavLink to="nasa">Nasa API</NavLink>
             <br />
             <NavLink to="ghibli">Ghibli API</NavLink>
+            <br />
+            <NavLink to="imdb">IMDB API</NavLink>
             <br />
         </>
     )
