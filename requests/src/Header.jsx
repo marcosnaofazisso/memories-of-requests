@@ -15,6 +15,8 @@ function Header() {
             <br />
             <NavLink to="imdb">IMDB API</NavLink>
             <br />
+            <NavLink to="starwars">Star Wars API</NavLink>
+            <br />
             <NavLink to="chucknorris">Chuck Norris API</NavLink>
             <br />
         </>
