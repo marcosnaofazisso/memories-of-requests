@@ -1,14 +1,14 @@
 import React from 'react'
-import { useFetch } from './hooks/useFetch'
+import { useFetch } from '../hooks/useFetch'
 
-function BetterRequests(props) {
-
-    const { data } = useFetch('https://ghibliapi.herokuapp.com/films')
+function Ghibli() {
+    
+    const {data} = useFetch('https://ghibliapi.herokuapp.com/films')
 
     return (
         <>
-            <h1>Ghibli Movies</h1>
-            {<h1>JSON: </h1> && JSON.stringify(data)}
+            <h1>Ghibli</h1>
+            {/* {<h1>JSON: </h1> && JSON.stringify(data)} */}
             {data?.map(film => {
                 return (
                     <div key={film.id}>
@@ -22,4 +22,4 @@ function BetterRequests(props) {
     )
 }
 
-export default BetterRequests
+export default Ghibli

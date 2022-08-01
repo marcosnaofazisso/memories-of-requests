@@ -6,10 +6,20 @@ export function useFetch(url) {
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        axios.get(url)
-            .then(
-                response => { setData(response.data) })
+
+        var t0 = performance.now()
+
+        try {
+            axios.get(url)
+                .then(response => { setData(response.data) })
+
+        } catch (error) {
+            console.log("Error: " + error)
+        }
+
         // console.log(JSON.stringify(data))
+        var t1 = performance.now()
+        console.log('AXIOS - Time taken to execute:' + (t1 - t0) + ' milliseconds')
 
     }, [])
 
