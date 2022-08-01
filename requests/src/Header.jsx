@@ -5,6 +5,8 @@ function Header() {
     return (
         <>
             <h1>Header</h1>
+            <NavLink to="/">Home</NavLink>
+            <br />
             <NavLink to="pokemon">PokeAPI</NavLink>
             <br />
             <NavLink to="digimon">Digimon API</NavLink>
