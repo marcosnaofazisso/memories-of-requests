@@ -7,9 +7,9 @@ function Pokeapi() {
 
     useEffect(() => {
         async function getData() {
-            const response = await axios.get('https://pokeapi.co/api/v2/pokemon/pikachu');
-            console.log(response)
-            setPokemons(response)
+            const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0');
+            console.log(response.data.results[0])
+            setPokemons(response.data.results)
 
         }
         getData();
@@ -19,16 +19,15 @@ function Pokeapi() {
     return (
         <>
             <h1>PokeAPI</h1>
-            {<h1>JSON: </h1> && JSON.stringify(pokemons)}
-
-            {/* {pokemons?.map(pokemon => {
+            {/* {<h1>JSON: </h1> && JSON.stringify(pokemons)} */}
+            {pokemons?.map(pokemon => {
                 return (
-                    <div key={pokemon.data.id}>
-                        <strong>{pokemon.data.name}</strong>
-                        <p>{pokemon.data.species.url}</p>
+                    <div key={pokemon.name}>
+                        <strong>{pokemon.name}</strong>
+                        <p>{pokemon.url}</p>
                     </div>
                 )
-            })} */}
+            })}
         </>
     )
 }
