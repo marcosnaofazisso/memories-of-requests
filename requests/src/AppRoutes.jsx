@@ -8,6 +8,8 @@ import Digimon from './components/Digimon';
 import ChuckNorris from './components/ChuckNorris';
 import Imdb from './components/Imdb';
 import StarWars from './components/StarWars';
+import Deezer from './components/Deezer';
+import Napster from './components/Napster';
 
 function AppRoutes() {
     return (
@@ -21,6 +23,8 @@ function AppRoutes() {
                 <Route path="/imdb" element={<Imdb />} />
                 <Route path="/starwars" element={<StarWars />} />
                 <Route path="/chucknorris" element={<ChuckNorris />} />
+                <Route path="/deezer" element={<Deezer />} />
+                <Route path="/napster" element={<Napster />} />
             </Routes>
         </>
     )

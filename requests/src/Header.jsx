@@ -21,6 +21,10 @@ function Header() {
             <br />
             <NavLink to="chucknorris">Chuck Norris API</NavLink>
             <br />
+            <NavLink to="napster">Napster API</NavLink>
+            <br />
+            <NavLink to="deezer">Deezer API</NavLink>
+            <br />
         </>
     )
 }
