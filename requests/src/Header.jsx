@@ -25,6 +25,8 @@ function Header() {
             <br />
             <NavLink to="deezer">Deezer API</NavLink>
             <br />
+            <NavLink to="news">News API</NavLink>
+            <br />
         </>
     )
 }

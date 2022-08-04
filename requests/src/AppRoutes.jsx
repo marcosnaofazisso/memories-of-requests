@@ -10,6 +10,7 @@ import Imdb from './components/Imdb';
 import StarWars from './components/StarWars';
 import Deezer from './components/Deezer';
 import Napster from './components/Napster';
+import News from './components/News';
 
 function AppRoutes() {
     return (
@@ -25,6 +26,7 @@ function AppRoutes() {
                 <Route path="/chucknorris" element={<ChuckNorris />} />
                 <Route path="/deezer" element={<Deezer />} />
                 <Route path="/napster" element={<Napster />} />
+                <Route path="/news" element={<News />} />
             </Routes>
         </>
     )
