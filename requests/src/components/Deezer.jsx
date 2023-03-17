@@ -5,8 +5,9 @@ function Deezer() {
 
     const id = process.env.REACT_APP_DEEZER
 
-    const userUrl = `https://api.deezer.com/user/${id}`
-    const playlistsUrl = `https://api.deezer.com/user/${id}/playlists`
+    const urlProxy = "https://cors-anywhere.herokuapp.com/"
+    const userUrl = `${urlProxy}https://api.deezer.com/user/${id}`
+    const playlistsUrl = `${urlProxy}https://api.deezer.com/user/${id}/playlists`
 
     const [users, setUsers] = useState();
     const [playlists, setPlaylists] = useState();
